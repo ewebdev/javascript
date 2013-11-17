@@ -23,6 +23,7 @@
   1. [Naming Conventions](#naming-conventions)
   1. [Accessors](#accessors)
   1. [Constructors](#constructors)
+  1. [Usage of &&, ||](#andorusage)
   1. [Events](#events)
   1. [Modules](#modules)
   1. [jQuery](#jquery)
@@ -1237,6 +1238,57 @@
     ```
 
     **[[⬆]](#TOC)**
+
+
+
+## <a name='andorusage'>Usage of &&, ||</a>
+
+  - When are simple enough, using &&, || operators outside of "if" expressions is cool and saves keystrokes.
+  The classic case is optional callbacks -
+
+    ```js
+    // bad
+    if (callback) {
+      callback();
+    }
+
+    ...
+
+    if (typeof callback === 'function') {
+      callback();
+    }
+    ```
+
+    prefer:
+
+    ```js
+    // good
+    callback && callback();
+        
+    ...
+
+    if (callback) callback();
+    ```
+    
+    
+  - Another example where || can (and should) be used to make things simpler
+    
+    ```js
+    // bad
+    if (val === undefined) {
+      return -1;
+    }
+    return val;
+    ```
+
+    prefer:
+
+    ```js
+    // good
+    return val || -1;
+    ```
+
+  **[[⬆]](#TOC)**
 
 
 ## <a name='events'>Events</a>
