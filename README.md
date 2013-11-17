@@ -1,6 +1,6 @@
-# Airbnb JavaScript Style Guide() {
-
+# JavaScript Style Guide() {
 *A mostly reasonable approach to JavaScript*
+##### Forked from [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 
 
 ## <a name='TOC'>Table of Contents</a>
