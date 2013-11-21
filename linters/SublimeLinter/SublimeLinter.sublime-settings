@@ -29,6 +29,19 @@
       "node": true,
 
       /*
+       * GLOBALS
+       * =================
+       */
+
+      "globals": {
+        // Define globals exposed by Underscore.js.
+        "_": true,
+
+        // Define globals exposed by Angular.js.
+        "angular": true
+      },
+
+      /*
        * ENFORCING OPTIONS
        * =================
        */
